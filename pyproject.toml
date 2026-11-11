@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yahoo-mail-mcp"
+version = "1.0.0"
+description = "Full Yahoo Mail control for AI agents and humans: CLI + MCP server over IMAP/SMTP/POP3 with a Yahoo app password. Zero dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["yahoo", "mail", "imap", "smtp", "mcp", "model-context-protocol", "ai-agent", "cli"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Communications :: Email",
+]
+
+[project.scripts]
+yahoo-mail = "yahoo_mail_cli:main"
+yahoo-mail-mcp = "yahoo_mail_mcp:main"
+
+[tool.setuptools]
+py-modules = ["yahoo_client", "yahoo_mail_cli", "yahoo_mail_mcp"]
